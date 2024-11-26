@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="level">
+                <div class="level-left">
+                    <h2 class="title is-4">Search Results</h2>
+                </div>
+                <div class="level-right">
+                    <a href="{{ url_for('logout') }}" class="button is-danger">Logout</a>
+                </div>
+            </div>
+            <div class="box">
+                <h2 class="title is-4">Search Results</h2>
+                {% if results %}
+                    {% for row in results %}
+                        <div class="box">
+                            <div class="columns">
+                                <div class="column">
+                                    <strong>Last Name:</strong> {{ row[0] }}<br>
+                                    <strong>First Name:</strong> {{ row[1] }}<br>
+                                    <strong>Middle Name:</strong> {{ row[2] }}<br>
+                                    <strong>House Number:</strong> {{ row[3] }}<br>
+                                    <strong>Pre Direction:</strong> {{ row[4] }}<br>
+                                    <strong>Street:</strong> {{ row[5] }}<br>
+                                    <strong>Type:</strong> {{ row[6] }}
+                                </div>
+                                <div class="column">
+                                    <strong>Apartment Number:</strong> {{ row[7] }}<br>
+                                    <strong>City:</strong> {{ row[8] }}<br>
+                                    <strong>ZIP:</strong> {{ row[9] }}<br>
+                                    <strong>Party:</strong> {{ row[10] }}<br>
+                                    <strong>Phone 1:</strong> {{ row[11] }}<br>
+                                    <strong>Phone 2:</strong> {{ row[12] }}<br>
+                                    <strong>Gender:</strong> {{ row[13] }}
+                                </div>
+                                <div class="column">
+                                    <strong>Birth Date:</strong> {{ row[14] }}<br>
+                                    <strong>Mail Street:</strong> {{ row[15] }}<br>
+                                    <strong>Mail City:</strong> {{ row[16] }}<br>
+                                    <strong>Mail State:</strong> {{ row[17] }}<br>
+                                    <strong>Mail ZIP:</strong> {{ row[18] }}<br>
+                                    <strong>Email:</strong> {{ row[19] }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="notification is-warning">No results found.</p>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</body>
+</html>

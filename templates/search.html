@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Database</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-6">
+                    <div class="box">
+                        <h2 class="title is-4 has-text-centered">Search Database</h2>
+                        <form action="/search" method="POST">
+                            <div class="field">
+                                <label class="label">First Name</label>
+                                <div class="control">
+                                    <input class="input" type="text" name="name_first" placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Last Name</label>
+                                <div class="control">
+                                    <input class="input" type="text" name="name_last" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Phone Number</label>
+                                <div class="control">
+                                    <input class="input" type="text" name="phone_number" placeholder="Phone Number">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">City</label>
+                                <div class="control">
+                                    <input class="input" type="text" name="city" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Address?</label>
+                                <div class="control">
+                                    <input class="input" type="text" name="address" placeholder="Address (e.g., 617 Edison)">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-primary is-fullwidth">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <p>For internal Cityside ue only. Do NOT share this tool outside of our editorial team(s).</p>
+ 
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
